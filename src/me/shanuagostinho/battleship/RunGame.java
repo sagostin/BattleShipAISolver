@@ -1,6 +1,7 @@
 package me.shanuagostinho.battleship;
 
-import me.shanuagostinho.battleship.solver.KenRandom;
+import me.shanuagostinho.battleship.solver.AndyV3LART;
+import me.shanuagostinho.battleship.solver.ShaunSolver;
 import me.shanuagostinho.battleship.utils.BattleShipTools;
 
 import java.util.Arrays;
@@ -37,7 +38,7 @@ public class RunGame {
             //copy array before passing to students
             char[][] s1Copy = Arrays.copyOf(s1Guesses, s1Guesses.length);
 
-            String guess1 = KenRandom.makeGuess(s1Copy);
+            String guess1 = ShaunSolver.makeGuess(s1Copy);
             history[moves - 1] = guess1;
             //System.out.println(guess1);
             boolean p1 = BattleShipTools.updateGuess(s1Guesses, guess1, gameBoard);
